@@ -1,8 +1,7 @@
 # Lab8-Starter
 
 ## Lab Partners
-
-Solo
+Fahad Majidi - Solo
 
 ## Deployed GitHub Pages URL
 
