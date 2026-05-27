@@ -23,6 +23,7 @@ class RecipeCard extends HTMLElement {
         }
         
         a {
+          color: #673AB7;
           text-decoration: none;
         }
   
@@ -32,6 +33,7 @@ class RecipeCard extends HTMLElement {
         
         article {
           align-items: center;
+          background: white;
           border: 1px solid rgb(223, 225, 229);
           border-radius: 8px;
           display: grid;
@@ -139,6 +141,12 @@ class RecipeCard extends HTMLElement {
         <time>${data.lengthTime}</time>
         <p class="ingredients">${data.ingredients}</p>
       `;
+
+      const recipeImage = article.querySelector('img');
+      recipeImage.addEventListener('error', () => {
+        recipeImage.src = './assets/images/icons/icon-512x512.png';
+        recipeImage.alt = 'Recipe icon';
+      }, { once: true });
     }
   }
   
